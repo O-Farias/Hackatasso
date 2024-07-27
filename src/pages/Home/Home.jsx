@@ -5,6 +5,7 @@ import "./Home.css";
 function Home() {
   const navigate = useNavigate();
 
+  // Função para lidar com o envio do formulário
   const handleSubmit = (event) => {
     event.preventDefault();
     // lógica para validar o CPF

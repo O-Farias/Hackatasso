@@ -8,6 +8,7 @@ function Dashboard() {
   const [isHoverShop, setIsHoverShop] = useState(false);
   const navigate = useNavigate();
 
+  // Função que redireciona para o link da loja
   const handleShopClick = () => {
     window.open(
       "https://venda.nextfit.com.br/d16261a1-690c-4c31-bc60-da8a2bb8acfd/contratos",

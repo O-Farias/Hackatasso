@@ -4,21 +4,25 @@ import { treinosData } from "../../mockData";
 import "./Treinos.css";
 import { FaCheckCircle } from "react-icons/fa";
 
+// Componente Treinos
 function Treinos() {
   const [selectedTreino, setSelectedTreino] = useState(null);
   const [showNotification, setShowNotification] = useState(false);
   const [countdown, setCountdown] = useState(5);
   const navigate = useNavigate();
 
+  // Função para lidar com o clique nos botões de treino
   const handleTreinoClick = (treino) => {
     setSelectedTreino(treino);
   };
 
+  // Funcionalidade de impressão
   const handlePrint = () => {
     window.print();
     setShowNotification(true);
   };
 
+  // Efeito para redirecionar após o countdown terminar
   useEffect(() => {
     if (showNotification) {
       const interval = setInterval(() => {
