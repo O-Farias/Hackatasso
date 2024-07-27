@@ -1,4 +1,3 @@
-// src/mockData.js
 export const treinosData = {
   "Treino C": {
     data: "03/06/2024 13:50:41",

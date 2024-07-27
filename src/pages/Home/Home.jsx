@@ -7,7 +7,7 @@ function Home() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // lógica para validar o CPF e outras operações
+    // lógica para validar o CPF
     navigate("/dashboard"); // Navega para a tela de Dashboard
   };
 
