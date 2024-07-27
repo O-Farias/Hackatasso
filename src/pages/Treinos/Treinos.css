@@ -1,0 +1,17 @@
+.treinos-container {
+  background-image: url("/public/assets/background-totem.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.btn-outline-primary {
+  border-color: #6a0dad;
+  color: #6a0dad;
+}
+
+.btn-outline-primary:hover {
+  background-color: #6a0dad;
+  color: white;
+}
