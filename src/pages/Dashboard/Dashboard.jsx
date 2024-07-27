@@ -8,6 +8,13 @@ function Dashboard() {
   const [isHoverShop, setIsHoverShop] = useState(false);
   const navigate = useNavigate();
 
+  const handleShopClick = () => {
+    window.open(
+      "https://venda.nextfit.com.br/d16261a1-690c-4c31-bc60-da8a2bb8acfd/contratos",
+      "_blank"
+    );
+  };
+
   return (
     <div className="dashboard-container d-flex flex-column align-items-center justify-content-center vh-100">
       <div className="card p-4 shadow" style={{ maxWidth: "400px" }}>
@@ -37,6 +44,7 @@ function Dashboard() {
               }}
               onMouseEnter={() => setIsHoverShop(true)}
               onMouseLeave={() => setIsHoverShop(false)}
+              onClick={handleShopClick}
             >
               <FaShoppingCart style={{ marginRight: "8px" }} /> Acessar loja
             </button>
