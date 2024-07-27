@@ -13,10 +13,10 @@
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  width: 300px;
-  padding: 20px;
+  width: 450px;
+  padding: 30px;
   text-align: center;
   z-index: 1000;
 }
@@ -36,6 +36,7 @@
   color: #666;
 }
 
-.notification .notification-icon svg {
+.notification .notification-icon {
   color: #6a0dad;
+  font-size: 48px;
 }

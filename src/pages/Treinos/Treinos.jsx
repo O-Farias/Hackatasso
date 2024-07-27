@@ -1,8 +1,8 @@
-// src/pages/Treinos/Treinos.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { treinosData } from "../../mockData";
 import "./Treinos.css";
+import { FaCheckCircle } from "react-icons/fa";
 
 function Treinos() {
   const [selectedTreino, setSelectedTreino] = useState(null);
@@ -40,27 +40,16 @@ function Treinos() {
       {showNotification ? (
         <div className="notification-container">
           <div className="notification">
-            <div className="notification-icon">
-              <svg
-                xmlns=""
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth="2"
-                color="#6a0dad"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12l2 2l4 -4"
-                />
-              </svg>
-            </div>
+            <FaCheckCircle
+              size={48}
+              color="#6a0dad"
+              className="notification-icon"
+            />
             <h2>{selectedTreino} impresso com sucesso!</h2>
             <p>Você será redirecionado para o início em: {countdown}</p>
-            <p>Bom treino!</p>
+            <p>
+              <strong>Bom treino!</strong>
+            </p>
           </div>
         </div>
       ) : (
