@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 import { FaPrint, FaShoppingCart } from "react-icons/fa";
 
+// Função que renderiza o componente Dashboard
 function Dashboard() {
   const [isHoverPrint, setIsHoverPrint] = useState(false);
   const [isHoverShop, setIsHoverShop] = useState(false);
