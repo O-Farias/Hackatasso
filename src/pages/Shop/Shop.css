@@ -1,0 +1,37 @@
+.shop-container {
+  background-image: url("/public/assets/background-totem.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.shop-card {
+  max-width: 600px;
+}
+
+.plan-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.choose-plan-button {
+  background-color: #6a0dad;
+  border-color: #6a0dad;
+  color: white;
+}
+
+.choose-plan-button:hover {
+  background-color: #5c009e;
+  border-color: #5c009e;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6a0dad;
+}
