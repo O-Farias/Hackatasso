@@ -35,11 +35,7 @@ function Shop() {
       {showNotification ? (
         <div className="notification-container">
           <div className="notification">
-            <FaCheckCircle
-              size={48}
-              color="#6a0dad"
-              className="notification-icon"
-            />
+            <FaCheckCircle className="notification-icon" />
             <h2>{selectedPlan} escolhido com sucesso!</h2>
             <p>Você será redirecionado para o início em: {countdown}</p>
             <p>
