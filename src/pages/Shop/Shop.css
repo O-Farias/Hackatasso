@@ -1,5 +1,5 @@
 .shop-container {
-  background-image: url("/public/assets/background-totem.jpg");
+  background-image: url("/assets/background-totem.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,13 +17,13 @@
   margin-bottom: 15px;
 }
 
-.choose-plan-button {
+.btn.choose-plan-button {
   background-color: #6a0dad;
   border-color: #6a0dad;
   color: white;
 }
 
-.choose-plan-button:hover {
+.btn.choose-plan-button:hover {
   background-color: #5c009e;
   border-color: #5c009e;
 }
@@ -34,4 +34,31 @@
   top: 50%;
   transform: translateY(-50%);
   color: #6a0dad;
+}
+
+.notification-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 450px;
+  padding: 30px;
+  text-align: center;
+  z-index: 1000;
+}
+
+.notification {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  max-width: 400px;
+}
+
+.notification-icon {
+  margin-bottom: 1rem;
 }
