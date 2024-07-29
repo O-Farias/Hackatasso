@@ -70,3 +70,5 @@ Se você deseja contribuir para este projeto, siga estas etapas:
 ## Licença
 
 Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+Deploy do projeto: https://totem-controle-acesso.vercel.app/
