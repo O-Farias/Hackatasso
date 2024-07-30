@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "../SearchBar/SearchBar";
-import "./Produtos.css";
+import CardComponent from "../CardComponent";
+import "../../pages/Shop/Shop.css";
 
 function Produtos() {
   const produtosData = [
@@ -28,15 +29,20 @@ function Produtos() {
 
   return (
     <div>
-      <SearchBar placeholder="Buscar produto" />
-      {produtosData.map((produto, index) => (
-        <div className="produto-card" key={index}>
-          <h5 className="card-title">{produto.nome}</h5>
-          <p className="card-text">{produto.descricao}</p>
-          <p className="card-text">Preço: {produto.preco}</p>
-          <button className="btn btn-primary">Adicionar ao Carrinho</button>
-        </div>
-      ))}
+      <SearchBar placeholder="Buscar produto" className="search-bar" />
+      <div className="items-container">
+        {produtosData.map((produto, index) => (
+          <CardComponent
+            key={index}
+            title={produto.nome}
+            description={`${produto.descricao}<br />Preço: ${produto.preco}`}
+            buttonText="Adicionar ao Carrinho"
+            onClick={() => {
+              /* Lógica para adicionar ao carrinho */
+            }}
+          />
+        ))}
+      </div>
     </div>
   );
 }
