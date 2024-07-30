@@ -58,6 +58,7 @@
 .item-card .btn:hover {
   background-color: #5c009e;
   border-color: #5c009e;
+  color: white;
 }
 
 .items-container {
