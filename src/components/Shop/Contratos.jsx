@@ -31,6 +31,12 @@ function Contratos({ handlePlanSelection }) {
           buttonText="Escolher plano"
           onClick={() => handlePlanSelection("Musculação semestral")}
         />
+        <CardComponent
+          title="Musculação anual"
+          description="Duração: 12 meses<br />Tx. adesão: Grátis<br />Preço: R$ 2.800,00"
+          buttonText="Escolher plano"
+          onClick={() => handlePlanSelection("Musculação anual")}
+        />
       </div>
     </div>
   );
