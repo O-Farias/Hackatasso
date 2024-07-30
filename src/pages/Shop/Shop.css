@@ -4,26 +4,46 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .shop-card {
   max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.plan-card {
+/* Classes unificadas para plan-card, produto-card, servico-card */
+.card {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
   margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px; /* Ajuste conforme necessário */
 }
 
-.btn.choose-plan-button {
+.card .card-text {
+  flex-grow: 1;
+}
+
+.card .btn {
+  align-self: flex-end;
   background-color: #6a0dad;
   border-color: #6a0dad;
   color: white;
+  margin-top: 10px;
 }
 
-.btn.choose-plan-button:hover {
+.card .btn:hover {
   background-color: #5c009e;
   border-color: #5c009e;
 }
