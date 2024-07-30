@@ -1,21 +1,23 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Contratos from "../../components/Shop/Contratos";
+import Produtos from "../../components/Shop/Produtos";
+import Servicos from "../../components/Shop/Servicos";
 import "./Shop.css";
-import { FaSearch, FaCheckCircle } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 
 function Shop() {
+  const [selectedTab, setSelectedTab] = useState("contracts");
   const [selectedPlan, setSelectedPlan] = useState(null);
   const [showNotification, setShowNotification] = useState(false);
   const [countdown, setCountdown] = useState(5);
   const navigate = useNavigate();
 
-  // Função para lidar com a seleção de planos e notificção
   const handlePlanSelection = (planName) => {
     setSelectedPlan(planName);
     setShowNotification(true);
   };
 
-  // Redireciona automaticamente para a tela de inicio
   useEffect(() => {
     if (showNotification) {
       const interval = setInterval(() => {
@@ -50,64 +52,42 @@ function Shop() {
             <p>Escolha o produto ideal para você.</p>
             <ul className="nav nav-tabs">
               <li className="nav-item">
-                <a className="nav-link active" href="#contracts">
+                <button
+                  className={`nav-link ${
+                    selectedTab === "contracts" ? "active" : ""
+                  }`}
+                  onClick={() => setSelectedTab("contracts")}
+                >
                   Contratos
-                </a>
+                </button>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#products">
+                <button
+                  className={`nav-link ${
+                    selectedTab === "products" ? "active" : ""
+                  }`}
+                  onClick={() => setSelectedTab("products")}
+                >
                   Produtos
-                </a>
+                </button>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#services">
+                <button
+                  className={`nav-link ${
+                    selectedTab === "services" ? "active" : ""
+                  }`}
+                  onClick={() => setSelectedTab("services")}
+                >
                   Serviços
-                </a>
+                </button>
               </li>
             </ul>
-            <div id="contracts" className="tab-content mt-4">
-              <div className="tab-pane active">
-                <div className="search-bar mb-3 position-relative">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Buscar contrato"
-                  />
-                  <FaSearch className="search-icon" />
-                </div>
-                <div className="plan-card">
-                  <h5 className="card-title">Musculação mensal</h5>
-                  <p className="card-text">
-                    Duração: 1 mês <br /> Tx. adesão: R$ 50,00 <br /> Preço: R$
-                    1.500,00
-                  </p>
-                  <button
-                    onClick={() => handlePlanSelection("Musculação mensal")}
-                    className="btn btn-primary choose-plan-button"
-                  >
-                    Escolher plano
-                  </button>
-                </div>
-                <div className="plan-card">
-                  <h5 className="card-title">Musculação semestral</h5>
-                  <p className="card-text">
-                    Duração: 6 meses <br /> Tx. adesão: Grátis <br /> Preço: R$
-                    1.500,00
-                  </p>
-                  <button
-                    onClick={() => handlePlanSelection("Musculação semestral")}
-                    className="btn btn-primary choose-plan-button"
-                  >
-                    Escolher plano
-                  </button>
-                </div>
-              </div>
-              <div id="products" className="tab-pane fade">
-                Produtos conteúdo aqui...
-              </div>
-              <div id="services" className="tab-pane fade">
-                Serviços conteúdo aqui...
-              </div>
+            <div className="tab-content mt-4">
+              {selectedTab === "contracts" && (
+                <Contratos handlePlanSelection={handlePlanSelection} />
+              )}
+              {selectedTab === "products" && <Produtos />}
+              {selectedTab === "services" && <Servicos />}
             </div>
           </div>
         </div>
