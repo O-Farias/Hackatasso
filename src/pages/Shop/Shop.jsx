@@ -13,11 +13,13 @@ function Shop() {
   const [countdown, setCountdown] = useState(5);
   const navigate = useNavigate();
 
+  // Função para lidar com o clique nos botões de abas
   const handlePlanSelection = (planName) => {
     setSelectedPlan(planName);
     setShowNotification(true);
   };
 
+  // Define a contagem regressiva para 5 segundos quando o componente é montado e a limpa quando é desmontado
   useEffect(() => {
     if (showNotification) {
       const interval = setInterval(() => {
