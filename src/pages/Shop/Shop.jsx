@@ -19,7 +19,6 @@ function Shop() {
     setShowNotification(true);
   };
 
-  // Define a contagem regressiva para 5 segundos quando o componente é montado e a limpa quando é desmontado
   useEffect(() => {
     if (showNotification) {
       const interval = setInterval(() => {
